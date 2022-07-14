@@ -1,0 +1,29 @@
+.siteTitle{
+    text-align: center;
+    font-size: 1.5rem;
+    color: #5FA95A;
+}
+
+nav ul{
+
+    list-style: none;
+    display: flex;
+    justify-content:center;
+}
+nav li{
+
+    margin: 0 3em;
+}
+nav a{
+    font-size: 1.3rem;
+    color: black;
+    font-weight: bold;
+    text-decoration: none;    
+}
+
+nav a:hover,
+nav a:focus{
+    cursor: pointer;
+    color: rgba(8, 110, 8, 0.489);
+    text-decoration: underline;
+}

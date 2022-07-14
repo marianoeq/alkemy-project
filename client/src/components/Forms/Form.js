@@ -1,22 +1,15 @@
 import React, { useState } from "react";
-import List from "./List";
-import "../index.css";
-/* import { getCurrentDate } from "../utils/getCurrentDate"; */
+import List from "../List/List";
+
 
 export default function Forms() {
-  const [data, setData] = useState(
-    {
-      concept: "",
-      amount: "",
-      selection: "",
-      date: "",
-    },
-  );
-
   const [expenses, setExpenses] = useState([]);
-
-  console.log(`Expenses:  `, expenses);
-  console.log(`Data:  `, data);
+  const [data, setData] = useState({
+    concept: "",
+    amount: "",
+    selection: "",
+    date: "",
+  });
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -27,14 +20,13 @@ export default function Forms() {
 
     newExpense = [
       ...newExpense,
-      
-        
-        {  concept: data.concept,
-          amount: data.amount,
-          selection: data.selection,
-          date: data.date,
-        },
-      
+
+      {
+        concept: data.concept,
+        amount: data.amount,
+        selection: data.selection,
+        date: data.date,
+      },
     ];
     setExpenses(newExpense);
   }
@@ -64,7 +56,7 @@ export default function Forms() {
           onChange={handleChange}
         />
         <select value={data.selection} name="selection" onChange={handleChange}>
-          <option  value="income">Income</option>
+          <option value="income">Income</option>
           <option value="outcome">Outcome</option>
         </select>
         <input

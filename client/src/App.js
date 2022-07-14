@@ -1,15 +1,13 @@
-import React,{useState} from "react";
-import "./App.css";
-import Form from "./components/Forms"
+import React from "react";
+import './index.css';
+
+import Form from "./components/Forms/Form";
+import NavBar from "./components/NavBar/NavBar";
 
 function App() {
-
-
- 
-
   return (
     <div className="App">
-
+      <NavBar/>
       <Form />
     </div>
   );
