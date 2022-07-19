@@ -1,14 +1,27 @@
 import React from "react";
-import './index.css';
+import "./index.css";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import Form from "./components/Forms/Form";
 import NavBar from "./components/NavBar/NavBar";
+import FormRegisterExpense from "./components/FormRegisterExpense/FormRegisterExpense";
+import MainPage from "./components/MainPage/MainPage";
+import NotFound from "./components/NotFound/NotFound";
 
 function App() {
   return (
     <div className="App">
-      <NavBar/>
-      <Form />
+       <Router>
+        <NavBar />
+        <Routes>
+          {/* <Route exact path="/" element={<MainPage />} /> */}
+          <Route exact path="/formregister" element={<FormRegisterExpense />} />
+        </Routes>
+      </Router> 
+    
+      
+   
+
+      
     </div>
   );
 }
