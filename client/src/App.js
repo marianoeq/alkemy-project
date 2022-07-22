@@ -13,8 +13,8 @@ function App() {
        <Router>
         <NavBar />
         <Routes>
-          {/* <Route exact path="/" element={<MainPage />} /> */}
           <Route exact path="/formregister" element={<FormRegisterExpense />} />
+          <Route exact path="/" element={<MainPage />} />
         </Routes>
       </Router> 
     
