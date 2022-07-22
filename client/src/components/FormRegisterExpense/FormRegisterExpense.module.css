@@ -1,0 +1,45 @@
+.form-container {
+  width: 50%;
+  margin: 5em auto;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form,
+input,
+select {
+  width: 75%;
+  padding: 0.5em;
+  text-align: center;
+}
+
+form,
+label {
+    margin-right: 1em;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.form-inputs-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 1em;
+}
+
+.btn-submit-form {
+  margin: 2em;
+  padding: 1em 2em;
+  border: transparent;
+  border-radius: 18%;
+  font-size: 1em;
+  color: white;
+  background-color: black;
+  font-weight: bold;
+}
