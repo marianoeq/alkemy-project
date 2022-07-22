@@ -3,14 +3,21 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": "16.x",
+    "npm": "8.x"
+  },
   "scripts": {
     "start": "node ./bin/www.js",
     "dev": "nodemon ./bin/www.js ",
-    "dbcreatetable":"node ./db/scripts/createExpensesTable.js" 
+    "dbcreatetable": "node ./db/scripts/createExpensesTable.js",
+    "dbpopulatetable": "node ./db/scripts/populateExpensesTable.js",
+    "dbdeletetable": "node ./db/scripts/dropExpensesTable.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
+    "dotenv": "^16.0.1",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",

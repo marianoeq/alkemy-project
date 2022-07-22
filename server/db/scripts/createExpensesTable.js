@@ -4,7 +4,7 @@ const sqlString = `CREATE TABLE IF NOT EXISTS
 expenses (id SERIAL PRIMARY KEY,
     concept VARCHAR NOT NULL,
     amount INT,
-    date DATE,
+  date VARCHAR NOT NULL, 
     type VARCHAR NOT NULL)`;
 
 async function createExpensesTable() {
@@ -13,5 +13,3 @@ async function createExpensesTable() {
 }
 
 createExpensesTable();
-
-
