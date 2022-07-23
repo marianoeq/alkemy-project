@@ -12,9 +12,10 @@ form {
 }
 
 form,
-input,
-select {
-  width: 75%;
+label,
+select,
+input {
+  width: 100%;
   padding: 0.5em;
   text-align: center;
 }
@@ -29,7 +30,6 @@ label {
 .form-inputs-container {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
   margin-bottom: 1em;
 }
 
