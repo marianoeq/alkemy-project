@@ -8,25 +8,26 @@ export default function MainPage() {
   const getData = async () => {
     const { data } = await axios.get(`http://localhost:3000/expense`);
     setData(data.payload);
-   
   };
-  
- 
-  //BALANCE 
+
+  //BALANCE
   data.map((element) => {
     if (element.type === "Income") {
-      balance += element.amount
+      balance += element.amount;
     } else {
-      balance -=element.amount;
+      balance -= element.amount;
     }
-    return balance
+    return balance;
   });
 
-  //DELETE 
- const handleDelete = (id) =>{
-   console.log(id)
-  }
-  
+  //DELETE
+  const handleDelete = async (id) => {
+    const res = await axios.delete(`http://localhost:3000/expense/${id}`);
+    alert(`The expense you seleced was deleted successfully`);
+    getData();
+    return res;
+  };
+
   useEffect(() => {
     getData();
   }, []);
@@ -61,7 +62,9 @@ export default function MainPage() {
                   <button>Edit</button>
                 </td>
                 <td>
-                  <button onClick={() =>handleDelete(element.id)}>Delete</button>
+                  <button onClick={() => handleDelete(element.id)}>
+                    Delete
+                  </button>
                 </td>
               </tr>
             </tfoot>
