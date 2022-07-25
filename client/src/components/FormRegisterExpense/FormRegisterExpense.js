@@ -1,31 +1,10 @@
-import React, { useState } from "react";
+/* import React, { useState } from "react"; */
 import styles from "./FormRegisterExpense.module.css";
-import axios from "axios";
-export default function FormRegisterExpense() {
-  const [data, setData] = useState({
-    concept: "",
-    amount: "",
-    date: "",
-    type: "",
-  });
-  console.log(data);
-  function handleChange(event) {
-    event.preventDefault();
-    let name = event.target.name;
-    let value = event.target.value;
-    setData((prevData) => {
-      return { ...prevData, [name]: value };
-    });
-  }
+/* import axios from "axios"; */
 
-  async function handleSubmit(event) {
-    event.preventDefault();
-    const res = await axios.post(`http://localhost:3000/expense`, data);
-    alert("Transaction submitted");
-    console.log(res);
-    return res;
-  }
+export default function FormRegisterExpense({nameButton, handleSubmit, data, handleChange}) {
 
+  
   return (
     <div className={styles["form-container"]}>
       <form onSubmit={handleSubmit}>
@@ -65,13 +44,14 @@ export default function FormRegisterExpense() {
             onChange={handleChange}
           >
             <option value="">-- Choose --</option>
-            <option value="income">Income</option>
-            <option value="outcome">Outcome</option>
+            <option value="Income">Income</option>
+            <option value="Outcome">Outcome</option>
           </select>
         </div>
-        <button className={styles["btn-submit-form"]} type="submit">
-          Submit
+       <button className={styles["btn-submit-form"]} type="submit">
+        {nameButton}
         </button>
+    
       </form>
     </div>
   );
