@@ -1,10 +1,11 @@
-import React from "react";
 
-
-export default function NotFound(){
-    return(
-        <div>
-            <h1>This page does not exist</h1>
-        </div>
-    )
+import styles from "./NotFound.module.css";
+export default function NotFound() {
+  return (
+    <>
+      <div className={styles["notfound-container"]}>
+        <h2 className={styles["notFound"]}>We couldn't find your page 😔</h2>
+      </div>
+    </>
+  );
 }

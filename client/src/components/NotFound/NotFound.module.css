@@ -1,0 +1,14 @@
+.notfound-container {
+  background-image: url("../../../public/notfoundpic.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 75%;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.notFound {
+  font-size: 40px;
+  margin-bottom: 80px;
+  text-align: center;
+}
