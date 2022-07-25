@@ -11,9 +11,8 @@ export default function NavBar() {
     <nav>
         <ul>
             <li><a href="/">Main Page</a></li>
-            <li><a href="#">Categories</a></li>
-            <li><a href="/formregister">Register expense</a></li>
-            <li><a href="#">Log in/sign up</a></li>
+            <li><a href="/formregisterexpense">Register expense</a></li>
+            <li>Log in/sign up</li>
         </ul>
     </nav>
    </header>
