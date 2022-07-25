@@ -15,10 +15,10 @@ export async function createExpenses(newExpense) {
 }
 
 export async function updateExpenseById(id, update) {
-  const { concept, amount, date, type } = update;
+  const { concept, amount, date } = update;
   const res = await query(
-    `UPDATE expenses SET concept=$1 , amount=$2, date=$3, type=$4 WHERE id = ${id} RETURNING *`,
-    [concept, amount, date, type]
+    `UPDATE expenses SET concept=$1 , amount=$2, date=$3 WHERE id = ${id} RETURNING *`,
+    [concept, amount, date]
   );
   return res.rows;
 }
