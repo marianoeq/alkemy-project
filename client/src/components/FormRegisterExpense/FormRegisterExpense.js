@@ -1,10 +1,12 @@
-/* import React, { useState } from "react"; */
 import styles from "./FormRegisterExpense.module.css";
-/* import axios from "axios"; */
 
-export default function FormRegisterExpense({nameButton, handleSubmit, data, handleChange}) {
-
-  
+export default function FormRegisterExpense({
+  nameButton,
+  handleSubmit,
+  data,
+  handleChange,
+  isEditable,
+}) {
   return (
     <div className={styles["form-container"]}>
       <form onSubmit={handleSubmit}>
@@ -35,23 +37,24 @@ export default function FormRegisterExpense({nameButton, handleSubmit, data, han
             onChange={handleChange}
           ></input>
         </div>
-        <div className={styles["form-inputs-container"]}>
-          <label>Type</label>
-          <select
-            id="type"
-            value={data.type}
-            name="type"
-            onChange={handleChange}
-          >
-            <option value="">-- Choose --</option>
-            <option value="Income">Income</option>
-            <option value="Outcome">Outcome</option>
-          </select>
-        </div>
-       <button className={styles["btn-submit-form"]} type="submit">
-        {nameButton}
+        {isEditable && (
+          <div className={styles["form-inputs-container"]}>
+            <label>Type</label>
+            <select
+              id="type"
+              value={data.type}
+              name="type"
+              onChange={handleChange}
+            >
+              <option value="">-- Choose --</option>
+              <option value="Income">Income</option>
+              <option value="Outcome">Outcome</option>
+            </select>
+          </div>
+        )}
+        <button className={styles["btn-submit-form"]} type="submit">
+          {nameButton}
         </button>
-    
       </form>
     </div>
   );
