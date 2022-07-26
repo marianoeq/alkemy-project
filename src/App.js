@@ -8,6 +8,7 @@ import FormRegisterExpense from "./components/FormRegisterExpense/FormRegisterEx
 import MainPage from "./components/MainPage/MainPage";
 import NotFound from "./components/NotFound/NotFound";
 import Footer from "./components/Footer/Footer"
+import LoginButton from "./components/LoginButton/LoginButton.js"
 
 function App() {
   const [data, setData] = useState({
@@ -49,6 +50,7 @@ function App() {
 
   return (
     <div className="App">
+      <LoginButton/>
       <NavBar />
       <Routes>
         <Route exact path="/" element={<MainPage />} />

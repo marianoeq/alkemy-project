@@ -6,7 +6,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 export default function Footer() {
   return (
-    <footer>
+    <footer className={styles["footer"]}>
       <div className={styles["footer-container"]}>
         <p className={styles["footer-paragraph"]}>Mariano Quiroga 💻 © 2022 </p>
 
