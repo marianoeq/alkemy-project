@@ -1,29 +1,45 @@
-.siteTitle{
-    text-align: center;
-    font-size: 1.5rem;
-    color: #5FA95A;
+.navbar-container {
+  border-bottom: 2px solid #72a276;
+  padding-bottom: 1.5em;
+  background-color: #fffaff;
+  margin: 0;
 }
 
-nav ul{
-
-    list-style: none;
-    display: flex;
-    justify-content:center;
+.title-container {
+  text-align: center;
 }
-nav li{
 
-    margin: 0 3em;
+.site-title {
+  font-size: 2.5em;
+  color: #0e120e;
+  font-family: serif;
+  padding: 0.6em;
 }
-nav a{
-    font-size: 1.3rem;
-    color: black;
-    font-weight: bold;
-    text-decoration: none;    
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+nav li {
+  margin: 0 3em;
+}
+nav a {
+  font-size: 1.5rem;
+  font-family: serif;
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 nav a:hover,
-nav a:focus{
-    cursor: pointer;
-    color: rgba(8, 110, 8, 0.489);
-    text-decoration: underline;
+nav a:focus {
+  cursor: pointer;
+  color: rgba(8, 110, 8, 0.489);
+  text-decoration: underline;
+}
+
+button {
+  background-color: transparent;
+  border-radius: 2%;
 }
