@@ -7,7 +7,7 @@ import NavBar from "./components/NavBar/NavBar";
 import FormRegisterExpense from "./components/FormRegisterExpense/FormRegisterExpense";
 import MainPage from "./components/MainPage/MainPage";
 import NotFound from "./components/NotFound/NotFound";
-
+import Footer from "./components/Footer/Footer"
 
 function App() {
   const [data, setData] = useState({
@@ -82,6 +82,7 @@ function App() {
 
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
+      <Footer/>
     </div>
   );
 }

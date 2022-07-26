@@ -2,14 +2,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 4em;
+  margin-top: 2em;
 }
 .balance-container {
   padding: 0.5em;
   margin-bottom: 1.5em;
   border-radius: 7%;
-  border: 1px solid #22291f;
-  background-color: #8dab7f;
+  background-color: #ecf9e6;
 }
 
 .balance-container,
@@ -42,7 +41,7 @@ th {
 }
 
 th {
-  background: #333;
+  background: rgba(66, 65, 65, 0.719);
   color: white;
   font-weight: bold;
 }

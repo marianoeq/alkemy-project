@@ -13,6 +13,7 @@ export default function FormRegisterExpense({
         <div className={styles["form-inputs-container"]}>
           <label>Concept</label>
           <input
+            placeholder="ie: salary,rent..."
             type="text"
             value={data.concept}
             name="concept"
