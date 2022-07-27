@@ -4,18 +4,13 @@ import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { Auth0Provider } from "@auth0/auth0-react";
+import { Auth0ProviderWithHistory } from "./auth0Provider";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    <Auth0Provider
-      domain="dev-mlebn30d.us.auth0.com"
-      clientId="ll1b76E1D7MtUmM2Stnm4CXYczuyk1yN"
-      redirectUri={window.location.origin}
-    >
+    <Auth0ProviderWithHistory>
       <App />
-    </Auth0Provider>
-    ,
+    </Auth0ProviderWithHistory>
   </BrowserRouter>
 );
 

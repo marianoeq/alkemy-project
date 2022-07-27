@@ -49,7 +49,7 @@ function App() {
   };
 
   return (
-    <Auth0ProviderWithHistory>
+    
       <div className="App">
         <NavBar />
         <Routes>
@@ -86,7 +86,7 @@ function App() {
         </Routes>
         <Footer />
       </div>
-    </Auth0ProviderWithHistory>
+   
   );
 }
 
