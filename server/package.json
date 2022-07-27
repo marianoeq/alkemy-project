@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "node ./bin/www.js",
-    "dev": "nodemon ./bin/www.js ",
+    "dev": "nodemon -r dotenv/config ./bin/www.js ",
     "dbcreatetable": "node ./db/scripts/createExpensesTable.js",
     "dbpopulatetable": "node ./db/scripts/populateExpensesTable.js",
     "dbdeletetable": "node ./db/scripts/dropExpensesTable.js"
@@ -18,12 +18,14 @@
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
     "debug": "~2.6.9",
-    "dotenv": "^16.0.1",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
     "nodemon": "^2.0.19",
     "pg": "^8.7.3"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.1"
   }
 }

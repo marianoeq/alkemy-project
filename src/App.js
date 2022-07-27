@@ -3,12 +3,12 @@ import "./index.css";
 import { Route, Routes } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import Auth0ProviderWithHistory from "./auth0Provider";
 import NavBar from "./components/NavBar/NavBar";
 import FormRegisterExpense from "./components/FormRegisterExpense/FormRegisterExpense";
 import MainPage from "./components/MainPage/MainPage";
 import NotFound from "./components/NotFound/NotFound";
-import Footer from "./components/Footer/Footer"
-import LoginButton from "./components/LoginButton/LoginButton.js"
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [data, setData] = useState({
@@ -49,43 +49,44 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <LoginButton/>
-      <NavBar />
-      <Routes>
-        <Route exact path="/" element={<MainPage />} />
+    <Auth0ProviderWithHistory>
+      <div className="App">
+        <NavBar />
+        <Routes>
+          <Route exact path="/" element={<MainPage />} />
 
-        <Route
-          exact
-          path="/formregisterexpense"
-          element={
-            <FormRegisterExpense
-              nameButton={"Submit"}
-              handleSubmit={handlePost}
-              handleChange={handleChange}
-              data={data}
-              isEditable={true}
-            />
-          }
-        />
-        <Route
-          exact
-          path="/formeditexpense"
-          element={
-            <FormRegisterExpense
-              nameButton={"Edit"}
-              handleSubmit={(e) => handleEdit(e, sessionID)}
-              handleChange={handleChange}
-              data={data}
-              isEditable={false}
-            />
-          }
-        />
+          <Route
+            exact
+            path="/formregisterexpense"
+            element={
+              <FormRegisterExpense
+                nameButton={"Submit"}
+                handleSubmit={handlePost}
+                handleChange={handleChange}
+                data={data}
+                isEditable={true}
+              />
+            }
+          />
+          <Route
+            exact
+            path="/formeditexpense"
+            element={
+              <FormRegisterExpense
+                nameButton={"Edit"}
+                handleSubmit={(e) => handleEdit(e, sessionID)}
+                handleChange={handleChange}
+                data={data}
+                isEditable={false}
+              />
+            }
+          />
 
-        <Route path="*" element={<NotFound />}></Route>
-      </Routes>
-      <Footer/>
-    </div>
+          <Route path="*" element={<NotFound />}></Route>
+        </Routes>
+        <Footer />
+      </div>
+    </Auth0ProviderWithHistory>
   );
 }
 
