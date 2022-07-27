@@ -3,7 +3,6 @@ import "./index.css";
 import { Route, Routes } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import Auth0ProviderWithHistory from "./auth0Provider";
 import NavBar from "./components/NavBar/NavBar";
 import FormRegisterExpense from "./components/FormRegisterExpense/FormRegisterExpense";
 import MainPage from "./components/MainPage/MainPage";

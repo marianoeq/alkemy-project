@@ -58,18 +58,16 @@ td {
   border-bottom: 1px solid #011627;
 }
 
-button{
-    border: .5px solid black;
-    border-radius:8%;
-    color: rgb(218, 65, 65);
-
+.btn-edit {
+  border-radius: 8%;
+  text-decoration: none;
+  color: rgb(22, 22, 106);
 }
-.Link-router{ 
-    text-decoration: none;
-    color: rgb(22, 22, 106)
+.btn-delete {
+  border-radius: 8%;
+  text-decoration: none;
+  color: red;
 }
-
-
 @media only screen and (max-width: 760px),
   (min-device-width: 768px) and (max-device-width: 1024px) {
   table,
@@ -81,4 +79,4 @@ button{
     width: 50%;
     font-size: 0.9em;
   }
-  }
+}

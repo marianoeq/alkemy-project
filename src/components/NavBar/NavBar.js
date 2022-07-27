@@ -1,8 +1,10 @@
+import React from 'react';
 import styles from "./NavBar.module.css";
-import { useAuth0 } from "@auth0/auth0-react";
-
+import { useAuth0 } from '@auth0/auth0-react';
 export default function NavBar() {
-  const { loginWithRedirect, logout, user, isLoading } = useAuth0();
+  
+  const { loginWithRedirect,logout } = useAuth0();
+
   return (
     <header className={styles["navbar-container"]}>
       <div className={styles["title-container"]}>
@@ -21,14 +23,10 @@ export default function NavBar() {
             </button>
           </li>
           <li>
-            {!isLoading && !user && (
-              <button onClick={() => loginWithRedirect()}>Log In</button>
-            )}
+          <button className={styles["log-btn"]}  onClick={() => loginWithRedirect()}>Log in</button>
           </li>
           <li>
-            {!isLoading && user && (
-              <button onClick={() => logout()}>Log Out</button>
-            )}
+          <button className={styles["log-btn"]} onClick={() => logout(alert("You are logged out"))}>Log Out</button>
           </li>
         </ul>
       </nav>

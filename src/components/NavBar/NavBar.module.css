@@ -33,7 +33,9 @@ nav a {
 }
 
 nav a:hover,
-nav a:focus {
+nav a:focus,
+.log-btn:hover,
+.log-btn:focus {
   cursor: pointer;
   color: rgba(8, 110, 8, 0.489);
   text-decoration: underline;
@@ -42,7 +44,21 @@ nav a:focus {
 button {
   background-color: transparent;
   border-radius: 2%;
+  margin-bottom: 0.5em;
+  border-radius:7%;
+  border: 0.5px solid grey;
 }
+
+.log-btn {
+  border-radius:7%;
+  border: 0.5px solid grey;
+  font-size: 1.4rem;
+  font-family: serif;
+  color: black;
+  font-weight: bold;
+}
+
+
 
 @media only screen and (max-width: 760px),
   (min-device-width: 768px) and (max-device-width: 1024px) {

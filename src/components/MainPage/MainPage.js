@@ -75,11 +75,11 @@ export default function MainPage() {
                 <td>
                 <button onClick={() => handleID(element.id)}>
 
-                    <Link className={styles["Link-router"]} to="/formeditexpense">Edit </Link>
+                    <Link className={styles["btn-edit"]} to="/formeditexpense">Edit </Link>
                   </button>
                 </td>
                 <td>
-                  <button onClick={() => handleDelete(element.id)}>
+                  <button className={styles["btn-delete"]} onClick={() => handleDelete(element.id)}>
                     Delete
                   </button>
                 </td>
