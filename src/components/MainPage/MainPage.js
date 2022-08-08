@@ -5,12 +5,13 @@ import axios from "axios";
 
 
 export default function MainPage() {
+ 
   const [data, setData] = useState([]);
   let balance = 0;
 
 //GET REQUEST
   const getData = async () => {
-    const { data } = await axios.get(`http://localhost:3000/expense`);
+    const { data } = await axios.get(`/expense`);
     setData(data.payload);
   };
   
@@ -21,7 +22,7 @@ export default function MainPage() {
   
   //DELETE REQUEST
   const handleDelete = async (id) => {
-    const res = await axios.delete(`http://localhost:3000/expense/${id}`);
+    const res = await axios.delete(`/expense/${id}`);
     alert(`The expense you seleced was deleted successfully`);
     getData();
     return res;

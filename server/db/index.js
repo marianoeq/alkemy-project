@@ -1,7 +1,7 @@
 import pg from "pg";
-
+import dotenv from "dotenv";
 /* import * as config from  "../config.js" */
-import ("dotenv").config()
+
 
 const devConfig = {
   user: process.env.PG_USER,

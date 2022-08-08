@@ -10,6 +10,7 @@ import NotFound from "./components/NotFound/NotFound";
 import Footer from "./components/Footer/Footer";
 
 function App() {
+
   const [data, setData] = useState({
     concept: "",
     amount: 0,
@@ -31,7 +32,7 @@ function App() {
   //POST REQUEST
   const handlePost = async (event) => {
     event.preventDefault();
-    const res = await axios.post(`http://localhost:3000/expense`, data);
+    const res = await axios.post(`/expense`, data);
     alert("Transaction submitted");
     setData("");
     navigate("/");
@@ -41,7 +42,7 @@ function App() {
   //PUT REQUEST
   const handleEdit = async (event, id) => {
     event.preventDefault();
-    const res = await axios.put(`http://localhost:3000/expense/${id}`, data);
+    const res = await axios.put(`/${id}`, data);
     navigate("/");
     setData("");
     return res;
